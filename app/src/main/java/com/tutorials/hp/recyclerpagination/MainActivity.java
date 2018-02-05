@@ -1,7 +1,6 @@
 package com.tutorials.hp.recyclerpagination;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -15,7 +14,6 @@ import com.tutorials.hp.recyclerpagination.mRecycler.MyAdapter;
 public class MainActivity extends AppCompatActivity {
 
     RecyclerView rv;
-    MyAdapter adapter;
     Button nextBtn, prevBtn;
     Paginator p = new Paginator();
     private int totalPages = Paginator.TOTAL_NUM_ITEMS / Paginator.ITEMS_PER_PAGE;
@@ -63,8 +61,6 @@ public class MainActivity extends AppCompatActivity {
                 toggleButtons();
             }
         });
-
-
     }
 
     private void toggleButtons() {
@@ -78,6 +74,5 @@ public class MainActivity extends AppCompatActivity {
             nextBtn.setEnabled(true);
             prevBtn.setEnabled(true);
         }
-
     }
 }
